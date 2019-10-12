@@ -2,10 +2,12 @@
 Bluetooth Low Energy interface for minew E-8 beacons for housemachine project
 ## Installation
 Runs on raspberry pi. Testing on raspberry pi 4. 
-- install [bluepy](https://github.com/IanHarvey/bluepy)
 
-`sudo apt-get install python3-pip libglib2.0-dev
-sudo pip3 install bluepy`
+Install [bluepy](https://github.com/IanHarvey/bluepy)
+
+`sudo apt-get install python3-pip libglib2.0-dev`
+
+`sudo pip3 install bluepy`
 
 
 ## Usage
