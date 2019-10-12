@@ -1,4 +1,4 @@
 #!/bin/bash
-sleep 10
+sleep 5
 cd /home/pi/housemachine-ble
-/usr/bin/screen -dmS housemachine /usr/bin/python /home/pi/housemachine-ble/blescanner.py
+/usr/bin/screen -dmS blescanner sudo /usr/bin/python3 /home/pi/housemachine-ble/blescanner.py
