@@ -11,14 +11,48 @@ Install [bluepy](https://github.com/IanHarvey/bluepy)
 
 
 ## Usage
-From repo directory, type:
+To run one time type (bluepy has to be run as root):
 
-`sudo python3 accel_scanner.py`
+`sudo python3 blescanner.py`
+
+__To set Up Persistent Service__
+
+1. Create a service file like the following, _blescanner.service_:
+```
+[Unit]
+Description=Runs python based event logger after boot
+After=syslog.target network.target
+
+[Service]
+Type=forking
+ExecStart=/home/pi/housemachine-ble/textlog/launch_blescanner.sh
+
+[Install]
+WantedBy=multi-user.target
+```
+
+2. copy the service file to _/etc/init/_:
+
+```console
+sudo cp blescanner.service /lib/systemd/system
+```
+
+3. enable and start
+
+```console
+sudo systemctl enable blescanner.service
+sudo systemctl start blescanner.service
+```
+
+4. stop
+```console
+sudo systemctl stop blescanner.service
+```
 
 ## Info
 See [this page](https://reelyactive.github.io/advlib/), and select __Minew I7 (Accelerometer)__, to see how the acceleration is packed into the advertising packet.
 
-### E8 and i7 Accelerometer Beacon
+__E8 and i7 Accelerometer Beacon__
 
 | Byte(s) | Hex String   | Description                         |
 |--------:|:-------------|:------------------------------------|
