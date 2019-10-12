@@ -1,6 +1,7 @@
 # housemachine-ble
 Bluetooth Low Energy interface for minew E-8 beacons for housemachine project
-## Installation
+
+## Setup
 Runs on raspberry pi. Testing on raspberry pi 4. 
 
 Install [bluepy](https://github.com/IanHarvey/bluepy)
@@ -9,6 +10,10 @@ Install [bluepy](https://github.com/IanHarvey/bluepy)
 
 `sudo pip3 install bluepy`
 
+### Beacon Configuration
+Disable unnecessary beacon slots (for instance iBeacon), according to this guide: [https://reelyactive.github.io/diy/minew-e8-config/](https://reelyactive.github.io/diy/minew-e8-config/)
+
+Enable motion triggered event for ACCelerometer slot. I turn on triggering, with a duration of 1 second. This means that sensortag will broadcast accelerometer at 100ms for 1second after a qualifying motion event.
 
 ## Usage
 To run one time type (bluepy has to be run as root):
