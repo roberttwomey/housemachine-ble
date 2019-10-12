@@ -6,16 +6,7 @@ Runs on raspberry pi. Testing on raspberry pi 4.
 ## Info
 See this page, and select __Minew I7 (Accelerometer)__, to see how the acceleration is packed into the advertising packet.
 
-###### E8 and i7 Accelerometer Beacon
-
-This is best illustrated with an example using the following input:
-
-    advData: {
-      serviceData: { 
-        uuid: "ffe1",
-        data: "a1036400d70087fffe5705a03f23ac" 
-      }
-    }
+### E8 and i7 Accelerometer Beacon
 
 | Byte(s) | Hex String   | Description                         |
 |--------:|:-------------|:------------------------------------|
