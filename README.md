@@ -4,7 +4,7 @@ Bluetooth Low Energy interface for minew E-8 beacons for housemachine project
 Runs on raspberry pi. Testing on raspberry pi 4. 
 - install bluepy [https://github.com/IanHarvey/bluepy](https://github.com/IanHarvey/bluepy)
 ## Info
-See this page, and select __Minew I7 (Accelerometer)__, to see how the acceleration is packed into the advertising packet.
+See [this page](https://reelyactive.github.io/advlib/), and select __Minew I7 (Accelerometer)__, to see how the acceleration is packed into the advertising packet.
 
 ### E8 and i7 Accelerometer Beacon
 
