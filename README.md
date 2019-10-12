@@ -1,8 +1,20 @@
 # housemachine-ble
 Bluetooth Low Energy interface for minew E-8 beacons for housemachine project
-## Requirements
+## Installation
 Runs on raspberry pi. Testing on raspberry pi 4. 
-- install bluepy [https://github.com/IanHarvey/bluepy](https://github.com/IanHarvey/bluepy)
+
+Install [bluepy](https://github.com/IanHarvey/bluepy)
+
+`sudo apt-get install python3-pip libglib2.0-dev`
+
+`sudo pip3 install bluepy`
+
+
+## Usage
+From repo directory, type:
+
+`sudo python3 accel_scanner.py`
+
 ## Info
 See [this page](https://reelyactive.github.io/advlib/), and select __Minew I7 (Accelerometer)__, to see how the acceleration is packed into the advertising packet.
 
@@ -17,21 +29,5 @@ See [this page](https://reelyactive.github.io/advlib/), and select __Minew I7 (A
 | 5-6     | 0087         | Acceleration in Y-axis (signed 8.8) |
 | 7-8     | fffe         | Acceleration in Z-axis (signed 8.8) |
 | 9-14    | 5705a03f23ac | MAC address                         |
-
-Which would add the following property to advData:
-
-    serviceData: {
-      uuid: "ffe1",
-      data: "a1036400d70087fffe5705a03f23ac",
-      minew: {
-        frameType: "a1",
-        productModel: 3,
-        batteryPercent: 100,
-        accelerationX: 0.83984375,
-        accelerationY: 0.52734375,
-        accelerationZ: -0.0078125,
-        macAddress: "ac:23:3f:a0:05:57"
-      }
-    }
 
 from [https://github.com/reelyactive/advlib](https://github.com/reelyactive/advlib)
