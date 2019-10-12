@@ -30,20 +30,4 @@ See [this page](https://reelyactive.github.io/advlib/), and select __Minew I7 (A
 | 7-8     | fffe         | Acceleration in Z-axis (signed 8.8) |
 | 9-14    | 5705a03f23ac | MAC address                         |
 
-Which would add the following property to advData:
-
-    serviceData: {
-      uuid: "ffe1",
-      data: "a1036400d70087fffe5705a03f23ac",
-      minew: {
-        frameType: "a1",
-        productModel: 3,
-        batteryPercent: 100,
-        accelerationX: 0.83984375,
-        accelerationY: 0.52734375,
-        accelerationZ: -0.0078125,
-        macAddress: "ac:23:3f:a0:05:57"
-      }
-    }
-
 from [https://github.com/reelyactive/advlib](https://github.com/reelyactive/advlib)
