@@ -46,7 +46,7 @@ def parse_accel(data, addr):
 		accel_z = toDecimal(data[18:22])#float.fromhex(data[10:14])
 		addr = "".join([data[22+i:22+i+2] for i in range(0, len(data[22:]), 2)][::-1])
 		# print(uuid, frameType, productModel, batteryLevel, accel_x, accel_y, accel_z, addr)
-		return (addr, accel_x, accel_y, accel_z)
+		return (addr, accel_x, accel_y, accel_z, batteryLevel)
 
 	return None
 
@@ -61,8 +61,8 @@ class ScanDelegate(DefaultDelegate):
 				# print(value)
 				accel_data = parse_accel(value, dev.addr)
 				if accel_data is not None:
-					addr, accel_x, accel_y, accel_z = accel_data
-					print("%s:\t%f\t%f\t%f" % accel_data)
+					# addr, accel_x, accel_y, accel_z, battery = accel_data
+					print("%s:\t%f\t%f\t%f\t%f" % accel_data)
 				sys.stdout.flush()
 
 		# no filtering
