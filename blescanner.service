@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs python based ble event logger after boot
+After=syslog.target network.target
+
+[Service]
+Type=forking
+ExecStart=/home/pi/housemachine-ble/launch_blescanner.sh
+
+[Install]
+WantedBy=multi-user.target
