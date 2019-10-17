@@ -10,6 +10,10 @@ Install [bluepy](https://github.com/IanHarvey/bluepy)
 
 `sudo pip3 install bluepy`
 
+`sudo apt-get install sqlite`
+
+`pip3 install sqlite3`
+
 ### Beacon Configuration
 Disable unnecessary beacon slots (for instance iBeacon), according to this guide: [https://reelyactive.github.io/diy/minew-e8-config/](https://reelyactive.github.io/diy/minew-e8-config/)
 
