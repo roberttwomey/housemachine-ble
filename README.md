@@ -10,7 +10,6 @@ Install [bluepy](https://github.com/IanHarvey/bluepy) and sqlite.
 sudo apt-get install python3-pip libglib2.0-dev
 sudo pip3 install bluepy
 sudo apt-get install sqlite
-pip3 install sqlite3
 ```
 
 ### Beacon Configuration
