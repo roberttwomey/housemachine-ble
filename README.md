@@ -6,10 +6,10 @@ Runs on raspberry pi. Testing on raspberry pi 4.
 
 Install [bluepy](https://github.com/IanHarvey/bluepy)
 
-`sudo apt-get install python3-pip libglib2.0-dev
+```sudo apt-get install python3-pip libglib2.0-dev
 sudo pip3 install bluepy
 sudo apt-get install sqlite
-pip3 install sqlite3`
+pip3 install sqlite3```
 
 ### Beacon Configuration
 Disable unnecessary beacon slots (for instance iBeacon), according to this guide: [https://reelyactive.github.io/diy/minew-e8-config/](https://reelyactive.github.io/diy/minew-e8-config/)
