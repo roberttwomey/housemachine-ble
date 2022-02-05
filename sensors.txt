@@ -1,3 +1,5 @@
+#cema
+ac:23:3f:ab:e7:49 chair
 # home
 
 # clarke center
